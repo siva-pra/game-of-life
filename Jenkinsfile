@@ -1,4 +1,7 @@
 pipeline {
+    tools{
+        maven 'MAVEN_HOME'
+    }
     agent { label 'maven' }
     triggers { pollSCM('* * * * *') }
     stages {
